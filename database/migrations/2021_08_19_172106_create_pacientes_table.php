@@ -23,7 +23,7 @@ class CreatePacientesTable extends Migration
             $table->string('lugar_nacimiento', 50);
             $table->unsignedBigInteger('id_ciudad')->unique();
             $table->foreign('id_ciudad')
-                ->references('id')->on('ciudades')
+                ->references('id')->on('ciudads')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->unsignedBigInteger('id_diabetes')->unique();

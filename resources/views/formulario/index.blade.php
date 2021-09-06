@@ -50,6 +50,14 @@
         </div>
     </div>
     <div class="row">
+    <div class="col-4">
+                <select class="form-select" aria-label="Default select example" name="id_ciudad">
+                    <option selected>Seleccione tipo de diabetes:</option>
+                    @foreach($nombreCiudad as $ciudad)
+                    <option value="{{$ciudad->id}}">{{$ciudad->nombre}}</option>
+                    @endforeach
+                  </select>
+            </div>
             <div class="col-4">
                 <select class="form-select" aria-label="Default select example" name="id_diabetes">
                     <option selected>Seleccione tipo de diabetes:</option>

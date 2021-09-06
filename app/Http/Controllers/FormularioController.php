@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Paciente;
 use App\Diabetes;
+use App\Ciudad;
 use DB;
 
 
@@ -45,6 +46,7 @@ class FormularioController extends Controller
         $paciente->fecha_nacimiento = $request->fecha_nacimiento;
         $paciente->email = $request->email;
         $paciente->lugar_nacimiento = $request->lugar_nacimiento;
+        $paciente->id_ciudad = $request->id_ciudad;
         $paciente->id_diabetes = $request->id_diabetes;
         $paciente->save();
         return view('welcome');
@@ -102,7 +104,8 @@ class FormularioController extends Controller
        return view('formulario.index', compact('tipoDiabetes'));*/
        
        $tipoDiabetes = Diabetes::all();
-       return view('formulario.index', compact('tipoDiabetes'));
+       $nombreCiudad = Ciudad::all();
+       return view('formulario.index', compact('tipoDiabetes','nombreCiudad'));
 
     }
 }
