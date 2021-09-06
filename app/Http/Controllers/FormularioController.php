@@ -45,6 +45,7 @@ class FormularioController extends Controller
         $paciente->fecha_nacimiento = $request->fecha_nacimiento;
         $paciente->email = $request->email;
         $paciente->lugar_nacimiento = $request->lugar_nacimiento;
+        $paciente->id_diabetes = $request->id_diabetes;
         $paciente->save();
         return view('welcome');
     }

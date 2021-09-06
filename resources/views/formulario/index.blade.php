@@ -50,26 +50,19 @@
         </div>
     </div>
     <div class="row">
+            <div class="col-4">
+                <select class="form-select" aria-label="Default select example" name="id_diabetes">
+                    <option selected>Seleccione tipo de diabetes:</option>
+                    @foreach($tipoDiabetes as $tipo)
+                    <option value="{{$tipo->id}}">{{$tipo->tipo_diabetes}}</option>
+                    @endforeach
+                  </select>
+            </div>
+    </div>
+    <div class="row">
         <div class="col-4">
             <button type="submit">Enviar</button>
         </div>
     </div>
 </form>
-
-<div class="row">
-    <div class="col-4">
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            @foreach($tipoDiabetes as $tipo)
-            <option value="{{$tipo->id}}">{{$tipo->tipo_diabetes}}</option>
-            @endforeach
-          </select>
-    </div>
-    <div class="col-4">
-        <h4>hola</h4>
-    </div> 
-    <div class="col-4">
-        <h4>hola</h4>
-    </div>  
-</div>
 @endsection
